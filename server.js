@@ -20,8 +20,8 @@ const contactEmail = nodemailer.createTransport({
   host : "smto.gmail.com",
   port: 3000,
   auth: {
-    user: "pfmoviesnry@gmail.com",
-    pass: "Zamblera4713347*",
+    user: "",
+    pass: "",
   },
 });
 
