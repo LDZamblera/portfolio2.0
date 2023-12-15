@@ -14,24 +14,21 @@ app.listen(5000, () => console.log("Server Running"));
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
 
-const contactEmail = nodemailer.createTransport({
-  
-  service: "gmail",
-  host : "smto.gmail.com",
-  port: 3000,
-  auth: {
-    user: "",
-    pass: "",
-  },
-});
+//const contactEmail = nodemailer.createTransport({
+ // service: 'gmail',
+//  auth: {
+//    user: "",
+  //  pass: ""
+ // },
+//});
 
-contactEmail.verify((error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Ready to Send");
-  }
-});
+// contactEmail.verify((error) => {
+ //  if (error) {
+ //    console.log(error);
+ //  } else {
+ //    console.log("Ready to Send");
+//   }
+//  });
 
 router.post("/contact", (req, res) => {
   const name = req.body.firstName + req.body.lastName;
