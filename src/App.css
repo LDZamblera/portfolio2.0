@@ -20,6 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: black;
 }
 
 html {
@@ -34,6 +35,8 @@ body {
   background-color: #121212 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
+  background-image: "../src/assets/img/pink-texture-11.jpg";
+  
   
 }
 
@@ -48,6 +51,8 @@ p, a, li, button, ul {
   padding: 0;
   line-height: normal;
   text-decoration: none;
+  
+  
 }
 
 a:hover {
@@ -90,15 +95,21 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition: 0.32s ease-in-out;
-  background-color: rgba(8, 8, 8, 0.9); /* Ajusta el valor de la transparencia aquí */
+  background-color: rgba(2, 2, 2, 0.9); 
+  color: #f8f8fa;/* Ajusta el valor de la transparencia aquí */
 }
+
+
+
 
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
+  
 }
 nav.navbar a.navbar-brand {
     width: 9%;
+    
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -111,26 +122,47 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
+    
 }
+
+/* Estilos para la imagen del logo */
+.navbar-brand img {
+  border-radius: 30%; /* Bordes redondeados */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el cursor sobre la imagen del logo */
+.navbar-brand img:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: white solid 2px; /* Sombra sutil al pasar el cursor */
+}
+
+
+
+
+
+
 span.navbar-text {
     display: flex;
     align-items: center;
+    color: black;
 }
 .social-icon {
     display: inline-block;
     margin-left: 14px;
 }
 .social-icon a {
-    width: 42px;
-    height: 42px;
-    background: rgba(217, 217, 217, 0.1);
+    width: 50px;
+    height: 50px;
+    background: rgb(240, 240, 240);
     display: inline-flex;
     border-radius: 50%;
     margin-right: 6px;
     align-items: center;
     justify-content: center;
     line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(5, 5, 5, 0.5);
 }
 .social-icon a::before {
     content: "";
@@ -144,11 +176,16 @@ span.navbar-text {
 }
 .social-icon a:hover::before {
     transform: scale(1);
+    border: 5px solid white;
+    width: 52px;
+    height: 52px;
+    
 }
 .social-icon a img {
 	width: 40%;
 	z-index: 1;
-	transition: 0.3s ease-in-out;
+	transition: 0.5s ease-in-out;
+
 }
 .social-icon a:hover img {
 	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
@@ -162,10 +199,12 @@ span.navbar-text {
   margin-left: 18px;
 	position: relative;
 	background-color: transparent;
+
 	transition: 0.3s ease-in-out;
 }
 .navbar-text button span {
   z-index: 1;
+  color: #000;
 }
 .navbar-text button::before {
   content: "";
@@ -173,10 +212,12 @@ span.navbar-text {
   height: 100%;
   position: absolute;
   background-color: #fff;
+  color: #000;
   left: 0;
   top: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
+  
 }
 .navbar-text button:hover {
   color: #121212;
@@ -186,6 +227,7 @@ span.navbar-text {
 	width: 100%;
 	height: 100%;
 	position: absolute;
+  color: #000;
 }
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
@@ -209,7 +251,7 @@ nav.navbar .navbar-toggler-icon:before {
 	width: 24px;
 	position: absolute;
 	height: 2px;
-	background-color: #fff;
+	background-color: black;
 	top: 0;
 	left: 0;
 	content: '';
@@ -237,7 +279,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/pexels-philippe-donn-1169754.jpg');
+  background-image: url('./assets/img/pink-texture-11.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -246,7 +288,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(27, 2, 252, 0.5) -5.91%, rgba(5, 4, 12, 0.5) 111.58%);
+  background: linear-gradient(90.21deg, rgba(251, 143, 255, 0.678) -5.91%, rgba(241, 238, 238, 0.5) 111.58%);
   border: 1px solid rgba(12, 8, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
@@ -262,7 +304,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner p {
   color: #B8B8B8;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
@@ -276,11 +318,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   align-items: center;
 }
+
+.contacto {
+  color: rgb(5, 5, 5); 
+  /* Color del texto por defecto */
+  /* Transición suave para el cambio de color */
+}
+.contacto:hover {
+  color: black; /* Cambia a color blanco al pasar el cursor */
+}
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
+  color: white;
 }
 .banner button:hover svg {
   margin-left: 25px;
@@ -307,7 +359,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
-  background: linear-gradient(to bottom, #0000FF, #000000);
+  background: linear-gradient(to bottom, #ff84f5, #fdfdfd);
 }
 
 .skill-bx {
@@ -395,7 +447,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #1c05f0 -5.91%, #010103 111.58%);
+    background: linear-gradient(90.21deg, #fcaaf1 -5.91%, #ffffff 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -427,7 +479,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #1915f5 -5.91%, #030207 111.58%);
+  background: linear-gradient(90.21deg,  <Nav.Link
+        href="https://geamovil.com/cartilla/" // Enlace a la página deseada
+        className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
+        onClick={() => onUpdateActiveLink('home')}
+        target="_blank" // Abre enlace en una nueva pestaña
+      >
+        Planes y Cartilla
+      </Nav.Link> -5.91%, #fcfcfc 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -474,8 +533,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #1839f3 -5.91%, #030207 111.58%);
+  background-image: url("../src/assets/img/pexels-miguel-á-padriñán-19670.jpg");
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita repetir la imagen */
+  padding: 0; /* Elimina el padding si no se necesita */
+  margin: 0; /* Elimina el margen si no se necesita */
+  /* Otros estilos necesarios para tu elemento */
+  
   padding: 60px 0 200px 0;
+  color: black;
 }
 .contact img {
   width: 92%;
@@ -484,22 +551,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	font-size: 45px;
 	font-weight: 700;
   margin-bottom: 30px;
+  color: black;
 }
 .contact form input, .contact form textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #080808;
+  background: rgba(250, 250, 250, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  color: #fff;
+  
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
+
 }
 .contact form input:focus, .contact form textarea:focus {
-  background: rgba(255, 255, 255, 1);
+  background: rgb(252, 252, 252);
   color: #121212;
 }
 .contact form input::placeholder, .contact form textarea::placeholder {
@@ -521,17 +591,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 0;
   position: relative;
   transition: 0.3s ease-in-out;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
 }
 .contact form button span {
   z-index: 1;
   position: relative;
+  color: rgb(255, 255, 255);
+  background-color: #000;
+  padding: 1px;
+ 
 }
 .contact form button:hover {
   color: #fff;
 }
 .contact form button::before {
   content: "";
-  background: #121212;
+  background: #070707;
+  color: rgb(14, 13, 13);
   width: 0;
   height: 100%;
   position: absolute;
@@ -539,18 +617,45 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   left: 0;
   z-index: 0;
   transition: 0.3s ease-in-out;
+  
 }
 .contact form button:hover::before {
   width: 100%;
+  color: rgb(0, 0, 0);
+  background-color: #fff9f9;
+  
+
 }
 
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
-  background-image: url('./assets/img/pexels-philippe-donn-1169754.jpg');
+  background-image: url('./assets/img/pink-texture-11.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* styles.css */
+/* styles.css */
+
+
+
+
+/* Ejemplo de estilos para la clase 'fotow' */
+.fotow {
+
+  width: 300px; /* Ancho deseado */
+  height: auto; /* Altura automática para mantener la proporción */
+  border-radius: 15%; /* Para redondear la imagen (si se desea) */
+  /* Otros estilos que quieras aplicar */
+}
+.fotow:hover {
+  
+ /* Altura automática para mantener la proporción */
+  border-radius: 15%;
+  border-radius: 5px black solid; /* Para redondear la imagen (si se desea) */
+  /* Otros estilos que quieras aplicar */
 }
 .newsletter-bx {
   background: #FFFFFF;
@@ -576,7 +681,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .new-email-bx::before {
   content: "";
-  background: linear-gradient(90.21deg, #142cff -5.91%, #040208 111.58%);
+  background: linear-gradient(90.21deg, #fcaaf1 -5.91%, #f8f8f8 111.58%);
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -605,7 +710,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 0 15px;
 }
 .new-email-bx button {
-  background: linear-gradient(90.21deg, #2a2dfd -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #fcaaf1 -5.91%, #f8f8fa 111.58%);
   padding: 20px 65px;
   color: #fff;
   font-weight: 500;
